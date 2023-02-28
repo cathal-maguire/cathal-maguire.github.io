@@ -2089,12 +2089,6 @@ input, select, textarea {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
-        margin: 0;
- 		position: absolute;
-  		top: 0%;
-  		left: 50%;
-  		-ms-transform: translate(-50%, 416%);
-  		transform: translate(-50%, 416%);
 	}
 
 		input[type="submit"].icon:before,
