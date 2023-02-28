@@ -1,2 +1,0 @@
-# cathal-maguire.github.io
- 
