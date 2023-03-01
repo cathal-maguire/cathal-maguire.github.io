@@ -55,6 +55,8 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
+
+
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -2619,7 +2621,7 @@ input, select, textarea {
 			top: 0.75rem;
 		}
         .image.circular_bio_image {
-        width: 150px;
+			width: 150px;
         height: 150px;
         border-radius: 60%;
         margin: 0 0 0 30rem;
@@ -2635,10 +2637,24 @@ input, select, textarea {
        /*for demo*/
        display:inline-block;
        vertical-align:middle;
-       }
-       .circular_bio_image img{
-       width:101%;
-       }
+		  }
+		  
+		  /* Styles for mobile screens */
+		  @media only screen and (max-width: 820px) {
+			.image.circular_bio_image {
+			  margin: 0 auto;
+			  bottom: 0;
+			  justify-content: center;
+			  align-items: center;
+			  max-width: 100%;
+			  object-fit: contain;
+			}
+		  }
+
+		  .image.circular_bio_image img {
+			max-width: 100%;
+		  }
+
        .image.circular_orcid_image {
         width: 16px;
         height: 16px;
@@ -2722,6 +2738,7 @@ input, select, textarea {
 			}
 
 		}
+		
 
 	a.image {
 		overflow: hidden;
@@ -3455,19 +3472,40 @@ input, select, textarea {
 					background-color: #18bfef;
 				}
 
-		#intro h1 {
-			font-size: 5rem;
-			line-height: 1;
-			text-align: left;
-			margin-left: -6.5rem;
-		}
+				#intro h1 {
+					font-size: 5rem;
+					line-height: 1;
+					text-align: left;
+					margin-left: -6.5rem;
+				  }
+				  
+				  @media only screen and (min-width: 821px) {
+					#intro h1 {
+					  text-align: left; /* align left on larger screens */
+					}
+				  }
+				  
+				  @media only screen and (max-width: 820px) {
+					#intro h1 {
+						
+					  text-align: center; /* center on smaller screens */
+					  margin: 0; /* remove left margin */
+					}
+				  }
 
-		#intro p {
-			font-size: 1.25rem;
-			font-style: italic;
-			margin-top: -0.25rem;
-			text-align: left;
-		}
+				  #intro p {
+					font-size: 1.25rem;
+					font-style: italic;
+					margin-top: -0.25rem;
+					text-align: center; /* center on smaller screens */
+				  }
+				  
+				  @media only screen and (min-width: 821px) {
+					#intro p {
+						font-size: 1rem;
+					  text-align: left; /* left align on larger screens */
+					}
+				  }
 
 		#intro + #header {
 			margin-top: -20rem;
@@ -3520,48 +3558,47 @@ input, select, textarea {
 				transform: translateY(4rem);
 				opacity: 0;
 			}
+		
+			@media screen and (max-width: 980px) {
 
-		@media screen and (max-width: 980px) {
-
-			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
+				#intro {
+					padding: 4rem 4rem 2rem 4rem ;
+					min-height: 90vh;
+				}
+	
+					#intro p br {
+						display: none;
+					}
+	
+					#intro + #header {
+						margin-top: -14rem;
+					}
+	
 			}
-
-				#intro p br {
-					display: none;
+	
+			@media screen and (max-width: 736px) {
+	
+				#intro {
+					padding: 3rem 2rem 1rem 2rem ;
+					min-height: 80vh;
 				}
-
-				#intro + #header {
-					margin-top: -14rem;
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+	
+					#intro h1 {
+						font-size: 3.25rem;
+						line-height: 1.1;
+						margin-bottom: 1rem;
+					}
+	
+					#intro p {
+						font-size: 1rem;
+						margin-top: 0rem;
+					}
+	
+					#intro .actions {
+						display: none;
+					}
+	
 			}
-
-				#intro h1 {
-					font-size: 3.25rem;
-					line-height: 1.1;
-					margin-bottom: 1rem;
-				}
-
-				#intro p {
-					font-size: 1rem;
-					margin-top: 0rem;
-				}
-
-				#intro .actions {
-					display: none;
-				}
-
-		}
-
 /* Header */
 
 	#header {
@@ -3895,7 +3932,13 @@ input, select, textarea {
 						margin: 0 0 1.5rem 0;
 					}
 
-			}
+					@media only screen and (max-width: 768px) {
+						#main > .secondary.button {
+						  margin-bottom: 20px;
+						}
+					  }
+
+			}			
 
 		#main > .posts {
 			display: -moz-flex;
@@ -4018,6 +4061,42 @@ input, select, textarea {
 			}
 
 		}
+
+		.address {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: row;
+			align-items: center;
+		  }
+		  
+		  .address i {
+			float: left;
+			margin-right: 10px;
+		  }
+		  
+		  .address p {
+			font-size: 14px;
+			line-height: 22px;
+		  }
+
+		  .contact-info {
+			display: flex;
+			align-items: right;
+			flex-direction: column;
+			margin-bottom: 5px;
+		}
+		
+		.contact-info i {
+			margin-right: 10px;
+		}
+
+		.contact-info p {
+			display: block;
+		}
+
+		.button-container {
+			padding: 10px;
+		  }
 
 /* Footer */
 
