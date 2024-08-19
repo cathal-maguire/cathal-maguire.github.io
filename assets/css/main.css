@@ -4846,3 +4846,18 @@ input, select, textarea {
 		}
 
 	}
+	figure.image.main {
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	figure.image.main img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	figure.image.main figcaption {
+		margin-top: 10px;
+		font-style: italic;
+		color: #555;
+	}
