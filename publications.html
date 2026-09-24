@@ -10,6 +10,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.box {
+				border: 1px solid rgba(7, 31, 102, 0.5); /* darker, less transparent border */
+				border-radius: 12px; /* rounded corners */
+				padding-top: 1rem; /* less top whitespace */
+			}
+		</style>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -28,6 +35,7 @@
 							<li><a href="index.html">Home</a></li>
 							<li><a href="cv.html">Curriculum Vitae</a></li>
 							<li class="active"><a href="publications.html">Publications</a></li>
+							<li><a href="outreach.html">Outreach</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
@@ -39,17 +47,35 @@
 								<p style="margin-bottom:0;" itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="" href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FMaguire%2C%20C%2FMaguire%2C%20Cathal%22&filter_property_fq_property=AND&filter_property_fq_property=property%3A%22refereed%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq=%7B!type%3Daqp%20v%3D%24fq_property%7D&fq_author=author_facet_hier%3A%221%2FMaguire%2C%20C%2FMaguire%2C%20Cathal%22&fq_property=(property%3A%22refereed%22)&p_=0&q=author%3A(%22Maguire%2C%20C%22)&sort=date%20desc%2C%20bibcode%20desc" target="" rel="me noopener noreferrer" style="vertical-align:top;"><img src="images/link.png" style="width:1em;margin-right:.5em;" alt="">All publications</a></p>
                                 <p style="margin : 0; padding-top:0;" itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="" href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FMaguire%2C%20C%2FMaguire%2C%20Cathal%22&filter_property_fq_property=AND&filter_property_fq_property=property%3A%22refereed%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq=%7B!type%3Daqp%20v%3D%24fq_property%7D&fq_author=author_facet_hier%3A%221%2FMaguire%2C%20C%2FMaguire%2C%20Cathal%22&fq_property=(property%3A%22refereed%22)&q=author%3A%22%5EMaguire%2C%20C%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="" rel="me noopener noreferrer" style="vertical-align:top;"><img src="images/link.png" style="width:1em;margin-right:.5em;" alt="">First-author publications</a></p>
 		                        <br>
+								<!-- HD209 Paper -->
+								<div class="box">
+									<p style="margin-bottom:1;">
+										<b>
+										<a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260916834M/abstract">
+											<i>The asymmetric limbs of HD 209458 b observed with JWST NIRCam F322W2/F444W</i>, ApJL (in press).
+											<br>C. Maguire, E. Ahrer, C. Fairman, H. R. Wakeford, D. Christie, J. Kirk, E. K. H. Lee, E. Nasedkin, & M. Radica (2026)</br>
+										</a>
+										</b>
+										<br>
+										We reanalysed two JWST NIRCam transits of the hot Jupiter HD 209458 b observed with the F322W2 and F444W gratings respectively, in search of limb asymmetries. These transits were originally analysed and published in <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...963L...5X/abstract">Xue et al. (2024)</a>. To ensure any asymmetries found were truly atmospheric in origin, as opposed to originationg from timing uncertainties, we first refined the system parameters of HD 209458 with over 25 years of radial velocity and transit photometry data. To extract morning and evening transmission spectra, we fit the spectroscopic light curves with both <a href="https://catwoman.readthedocs.io/en/latest/">catwoman</a> and <a href="https://harmonica.readthedocs.io/en/latest/">Harmonica</a>, and found both produced spectra in excellent agreement (see Fig. 1 below). We then fit these limb spectra with both free and equilibrium chemistry atmospheric retrievals, using <a href="https://exo-skryer.readthedocs.io/en/latest/">Exo Skryer</a>. 
+									</p>
+									<p style="margin:0; padding-top:0;">
+										<span class="image fit"><img src="images/HD209_EurekaSpectra_MornEveComp.png" alt="Broadening kernel" /></span>
+									</p>
+									<p>
+										<b>Figure 1.</b> <i>Left:</i> A comparison of the morning (cyan) and evening (orange) transmission spectra obtained from our catwoman fit. <i>Right:</i> A comparison of the morning (blue) and evening (red) transmission spectra obtained from our Harmonica fit. The spectra shown here were reduced with <a href="https://eurekadocs.readthedocs.io/en/v1.0/">Eureka!</a>.
+									</p>
+								</div>
 								<!-- Telluric Removal Paper -->
 								<div class="box">
 									<p style="margin-bottom:1;">
 										<b>
 											<a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...692A...8M/abstract">
-												C. Maguire, E. Sedaghati, N. P. Gibson, A. Smette, & L. Pino (2024).  
-											<i>Assessing methods for telluric removal on atmospheric retrievals of high-resolution optical exoplanetary transmission spectra </i>, A&A, 692, A8.
+												<i>Assessing methods for telluric removal on atmospheric retrievals of high-resolution optical exoplanetary transmission spectra </i>, A&A, 692, A8.
+												<br>C. Maguire, E. Sedaghati, N. P. Gibson, A. Smette, & L. Pino (2024).  </br>
 										</a>
 										</b>
 										<br>
-										<br> <!-- Break line added here -->
 										We injected planetary models on differing orbital architectures into three VLT/ESPRESSO datasets. These injected datasets were then reduced using two distinct treatments for the removal of telluric contamination: <strong>SysRem</strong> and <strong>molecfit</strong>. The effects of these telluric removal routines on the properties of the underlying injected signals, such as atmospheric abundance, temperature structure, or velocity offsets, were assessed via atmospheric retrievals (i.e., injection and recovery tests).
 									</p>
 								</div>
@@ -58,12 +84,11 @@
 									<p style="margin-bottom:1;">
 										<b>
 											<a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...687A..49M/abstract">
-											C. Maguire, N. P. Gibson, S. K. Nugroho, M. Fortune, S. Ramkumar, S. Gandhi, & E. de Mooij (2024).  
 											<i>High resolution atmospheric retrievals of WASP-76b transmission spectroscopy with ESPRESSO: Monitoring limb asymmetries across multiple transits</i>, A&A, 687, A49.
+											<br>C. Maguire, N. P. Gibson, S. K. Nugroho, M. Fortune, S. Ramkumar, S. Gandhi, & E. de Mooij (2024). </br>
 										</a>
 										</b>
 										<br>
-										<br> <!-- Break line added here -->
 										We observed three transits of the ultra-hot Jupiter WASP-76b with VLT/ESPRESSO, and utilised a novel rotational broadening kernel (see Fig. 1 below) to separate the contributions of the morning (leading) and evening (trailing) limbs of the atmosphere. We then constrained the relative abundances and vertical temparature structure of each limbs across all three transits. We found substellar Cr/Fe and Na/Fe ratios, consistent with previous works, suggesting depletion of Cr and Na due to recombination or ionisation, for example. 
 									</p>
 									<p style="margin:0; padding-top:0;">
@@ -78,11 +103,10 @@
 								    <p style="margin-bottom:1;">
 										<b>
 										<a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.519.1030M/abstract">
-											C. Maguire, N. P. Gibson, S. K. Nugroho, S. Ramkumar, M. Fortune, S. R. Merritt, & E. de Mooij (2023). 
 											<i>High-resolution atmospheric retrievals of WASP-121b transmission spectroscopy with ESPRESSO: Consistent relative abundance constraints across multiple epochs and instruments</i>, MNRAS, 519, 1030.
-										</b>
+											<br>C. Maguire, N. P. Gibson, S. K. Nugroho, S. Ramkumar, M. Fortune, S. R. Merritt, & E. de Mooij (2023). </br>
 										</a>
-										<br> <!-- Break line added here -->
+										</b>
 										<br>
 										We observed three transits of the ultra-hot Jupiter WASP-121b with VLT/ESPRESSO, and obtained the relative abundances of various neutral metals (Fe, Mg, Cr, Ti, V, Na, & Ca) across all three transits. These relative abundances were found to be consistent between each of our observations for species previously detected in the atmosphere of WASP-121b. They were also found to be consistent with stellar relative abundances, as well as a previous transit observation taken with VLT/UVES.
 									</p>

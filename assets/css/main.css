@@ -3729,7 +3729,7 @@ input, select, textarea {
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
 		overflow: hidden;
-		padding: 0 2rem 0 0;
+		padding: 0;
 		position: relative;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
@@ -3788,10 +3788,9 @@ input, select, textarea {
 		}
 
 		#nav ul.links {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
+			display: -ms-grid;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
@@ -3800,6 +3799,7 @@ input, select, textarea {
 			-webkit-flex-shrink: 1;
 			-ms-flex-shrink: 1;
 			flex-shrink: 1;
+			width: 100%;
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
 			font-weight: 900;
 			letter-spacing: 0.075em;
@@ -3812,7 +3812,10 @@ input, select, textarea {
 
 			#nav ul.links li {
 				display: block;
+				box-sizing: border-box;
 				padding-left: 0;
+				min-width: 0;
+				width: 100%;
 			}
 
 				#nav ul.links li a {
@@ -3821,10 +3824,14 @@ input, select, textarea {
 					-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					display: block;
+					box-sizing: border-box;
 					font-size: 0.8rem;
 					outline: none;
-					padding: 0 2rem;
-					width: 18rem;
+					padding: 0 1rem;
+					width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
 				}
 
 					#nav ul.links li a:hover {
