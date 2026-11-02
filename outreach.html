@@ -16,7 +16,7 @@ border: 1px solid rgba(7, 31, 102, 0.5); /* adjust color/alpha to taste */
 border-radius: 12px; /* rounded corners */
 padding-top: 1rem; /* less top whitespace */
             }
- 
+
 /* Two-column layout for outreach entries */
 .outreach-grid {
 display: grid;
@@ -26,6 +26,31 @@ align-items: stretch; /* boxes in the same row share a height */
 }
 .outreach-grid > .box {
 margin: 0; /* spacing handled by the grid gap */
+}
+/* Scale text down inside the narrower two-column boxes */
+.outreach-grid .box {
+font-size: 0.85rem; /* tweak to taste: 0.8rem smaller, 0.95rem larger */
+line-height: 1.6;
+}
+.outreach-grid .box p,
+.outreach-grid .box figcaption {
+font-size: inherit;
+}
+.outreach-grid .box b a {
+font-size: 1.05em; /* titles slightly larger than body text */
+}
+/* Responsive 16:9 YouTube embed that sizes correctly inside a grid column */
+.video-embed {
+width: 100%;
+margin-bottom: 1rem;
+}
+.video-embed iframe {
+display: block;
+width: 100%;
+height: auto;
+aspect-ratio: 16 / 9;
+border: 0;
+border-radius: 8px;
 }
 /* Collapse to a single column on smaller screens */
 @media screen and (max-width: 980px) {
@@ -37,15 +62,15 @@ grid-template-columns: 1fr;
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
- 
+
 <!-- Wrapper -->
 <div id="wrapper">
- 
+
 <!-- Header -->
 <header id="header">
 <a href="index.html" class="logo">Cathal Maguire</a>
 </header>
- 
+
 <!-- Nav -->
 <nav id="nav">
 <ul class="links">
@@ -56,7 +81,7 @@ grid-template-columns: 1fr;
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
- 
+
 <!-- Main -->
 <div id="main">
 <header>
@@ -65,28 +90,28 @@ grid-template-columns: 1fr;
 I frequently engage in seminars or public engagement talks about my research, as well as other related interests of mine. Feel free to <a href="contact.html">reach out</a> if you are hosting any outreach events!
 </p>
 <!-- <br> --> 
- 
+
 <!-- Outreach entries: laid out in two columns (one column on small screens) -->
 <div class="outreach-grid">
- 
+
 <div class="box">
 <p style="margin-bottom:1;">
 <b><a href="https://www.youtube.com/watch?v=f47cT2_DQbo"><i> Limb from Limb: Observing Atmospheric Asymmetries from the Ground and Space</i> <br>BOWIE+ Seminar Series, April 2026</a></b>
 <br>
 In the talk below I give an overview of how we observe <i>limb asymmetries</i> (i.e., independent transit depth measurements of a planet's leading and trailing limbs) using both ground-based high-resolution spectroscopy and space-based low-resolution spectroscopy. I highlight both observing methods with two case studies; WASP-76b with VLT/ESPRESSO and HD 209458 b with JWST/NIRCam.
 </p>
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
-<iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+<div class="video-embed">
+<iframe
 src="https://www.youtube.com/embed/f47cT2_DQbo?si=F1EB_jeW3W0-z06V" 
 title="YouTube video player" 
-referrerpolicy='strict-origin-when-cross-origin'
+referrerpolicy="strict-origin-when-cross-origin"
 frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 allowfullscreen>
 </iframe>
 </div>
 </div>
- 
+
 <div class="box">
 <p style="margin-bottom:1;">
 <b><a href="https://pintofscience.co.uk/event/all-eyes-on-the-universe/"><i>Observing the 3D-ness of Exoplanet Atmospheres</i> <br>Pint of Science, Bristol, May 2026</a></b>
@@ -98,7 +123,7 @@ I gave a talk as part of Pint of Science in The Left Handed Giant Taproom in Bri
     <figcaption>My Pint of Science talk at The Left Handed Giant Taproom in Bristol.</figcaption>
 </figure>
 </div>
- 
+
 <div class="box">
 <p style="margin-bottom:1;">
 <b><a href="https://astronomy.ie/product/exoplanet-atmospheres/"><i>Exoplanet Atmospheres</i> <br>Astronomy Ireland, November 2025</a></b>
@@ -106,14 +131,14 @@ I gave a talk as part of Pint of Science in The Left Handed Giant Taproom in Bri
 I gave a talk an introductory talk via Zoom on the history of exoplanets, from their postulation in Ancient Greece to their discovery in the 1990s, as part of the Astronomy Ireland Public Lectures. I then spoke about how and why we study their atmospheres.
 </p>
 </div>
- 
+
 <!-- Add further outreach entries here by copying a .box block above -->
- 
+
 </div> <!-- /.outreach-grid -->
- 
+
 </header>
 </div>
- 
+
 <!-- Footer -->
 <footer id="footer">
 <section>
@@ -125,14 +150,14 @@ I gave a talk an introductory talk via Zoom on the history of exoplanets, from t
 <p itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9061-780X" href="https://orcid.org/0000-0002-9061-780X" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-9061-780X</a></p>
 </section>
 </footer>
- 
+
 <!-- Copyright -->
 <div id="copyright">
 <ul><li>&copy; Cathal Maguire 2023</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 </div>
- 
+
 </div>
- 
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -141,6 +166,6 @@ I gave a talk an introductory talk via Zoom on the history of exoplanets, from t
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
- 
+
 </body>
 </html>
